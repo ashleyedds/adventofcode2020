@@ -51,10 +51,6 @@ export class Day2Component implements OnInit {
       const ruleUpperBoundary = parseInt(p.split(': ')[0].split(' ')[0].split('-')[1], 10);
       const letter = p.split(': ')[0].split(' ')[1];
       const password = p.split(': ')[1];
-      console.log(ruleLowerBoundary);
-      console.log(ruleUpperBoundary);
-      console.log(password);
-      console.log(password.charAt(ruleLowerBoundary - 1));
       if ((password.charAt(ruleLowerBoundary - 1) === letter && password.charAt(ruleUpperBoundary - 1) !== letter)
         || (password.charAt(ruleUpperBoundary - 1) === letter && password.charAt(ruleLowerBoundary - 1) !== letter)) {
         this.totalCountTwo++;
